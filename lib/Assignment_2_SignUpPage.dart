@@ -8,7 +8,6 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -21,11 +20,7 @@ class SignUpPage extends StatelessWidget {
                 hintText: "Email ID",
                 labelText: "Email ID",
                 prefixIcon: Icon(Icons.account_box_sharp),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-            )
-        ),
-      ),
-
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))))),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextField(obscureText: true,obscuringCharacter: '*',
@@ -34,10 +29,7 @@ class SignUpPage extends StatelessWidget {
                     labelText: "Password",
                     prefixIcon: Icon(Icons.visibility_off),
                     suffixIcon: Icon(Icons.visibility_off),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-                )
-            ),
-          ),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))))),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextField(obscureText: true,obscuringCharacter: '*',
@@ -46,11 +38,7 @@ class SignUpPage extends StatelessWidget {
                     labelText: "Confirm Password",
                     prefixIcon: Icon(Icons.visibility_off),
                     suffixIcon: Icon(Icons.visibility_off),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-                )
-            ),
-          ),
-
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))))),
           ElevatedButton(onPressed: (){
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => HomePage()));
@@ -60,16 +48,11 @@ class SignUpPage extends StatelessWidget {
             color: Colors.white,fontSize: 20,),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50)),
-          padding: EdgeInsets.only(left: 160,right: 160,top: 20,bottom: 20)
-
-      ),
-      ),
-
+          padding: EdgeInsets.only(left: 160,right: 160,top: 20,bottom: 20))),
           TextButton(onPressed: (){
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => Loginpage()));
           }, child: Text("Do you have an account? Login"))
-
         ],
       ),
     );

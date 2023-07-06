@@ -1,8 +1,6 @@
-import 'package:assignments_luminar/Assignment_2_SignUpPage.dart';
 import 'package:flutter/material.dart';
-
-import 'package:assignments_luminar/Assignment_2_HomePage.dart';
-// import 'Home.dart';
+import 'Assignment_2_SignUpPage.dart';
+import 'Assignment_2_HomePage.dart';
 
 class Loginpage extends StatelessWidget {
   const Loginpage ({Key? key}) : super(key: key);
@@ -30,30 +28,25 @@ class Loginpage extends StatelessWidget {
           ),
         Padding(
           padding: const EdgeInsets.all(12.0),
-          child: TextField(obscureText: true,obscuringCharacter: '*',
+           child: TextField(obscureText: true,obscuringCharacter: '*',
               decoration: InputDecoration(
                   hintText: "Password",
                   labelText: "Password",
                   prefixIcon: Icon(Icons.visibility_off),
                   suffixIcon: Icon(Icons.visibility_off),
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-              )
-          ),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)))
+           ),
         ),
-
         ElevatedButton(onPressed: (){
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => HomePage()));
-        }, child: Text("Login"),style: ElevatedButton.styleFrom(
+              builder: (context) => HomePage()));},
+          child: Text("Login"),style: ElevatedButton.styleFrom(
           primary: Colors.green,
           textStyle: TextStyle(
             color: Colors.white,fontSize: 20,),
             shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50)),
-            padding: EdgeInsets.only(left: 160,right: 160,top: 15,bottom: 15)
-
-        ),
-        ),
+            padding: EdgeInsets.only(left: 160,right: 160,top: 15,bottom: 15)),),
         TextButton(onPressed: (){
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => SignUpPage()));
@@ -63,3 +56,5 @@ class Loginpage extends StatelessWidget {
     );
   }
 }
+
+
