@@ -23,7 +23,7 @@ class _SplashScreen_3State extends State<SplashScreen_3> {
 
   @override
   void initState(){
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Whatsapp_Chat()));
   });
     super.initState();
