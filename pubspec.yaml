@@ -64,6 +64,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/humans/
+    - assets/fruits/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
