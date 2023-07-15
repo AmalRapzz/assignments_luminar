@@ -19,15 +19,22 @@ var message = [
 ];
 
 var time = ["9:32 am","9:30 am","8:54 am","8:50 am","7:08 am","12:05 am",'Yesterday','Yesterday','Yesterday','Yesterday',];
-var status = [Icon(Icons.done_all_outlined,color: Colors.grey[600],),
-              Icon(Icons.done_all_outlined,color: Colors.blue,),
-              Icon(Icons.done_all_outlined,color: Colors.blue,),
-              Icon(Icons.done_all_outlined,color: Colors.blue,),
-              Icon(Icons.done,color: Colors.grey[600],),
-              Icon(Icons.done,color: Colors.grey[600],),
-              Icon(Icons.done_all_outlined,color: Colors.blue,),
-              Icon(Icons.done_all_outlined,color: Colors.blue,),
-              Icon(Icons.done_all_outlined,color: Colors.grey[600],),   Icon(Icons.done_all_outlined,color: Colors.grey[600],),
+var status = [Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              Icons.done_all_outlined,
+              // Icon(Icons.done_all_outlined,color: Colors.blue,),
+              // Icon(Icons.done,color: Colors.grey[600],),
+              // Icon(Icons.done,color: Colors.grey[600],),
+              // Icon(Icons.done_all_outlined,color: Colors.blue,),
+              // Icon(Icons.done_all_outlined,color: Colors.blue,),
+              // Icon(Icons.done_all_outlined,color: Colors.grey[600],),   Icon(Icons.done_all_outlined,color: Colors.grey[600],),
              ];
 
 
@@ -43,25 +50,25 @@ class Whatsapp_Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Whatsapp"),
-        actions: [
-          Icon(Icons.camera_alt_outlined),
-          SizedBox(width: 30),
-          Icon(Icons.search),
-          SizedBox(width: 20),
-          PopupMenuButton(itemBuilder: (context) {
-            return [
-              PopupMenuItem(child: Text("New group")),
-              PopupMenuItem(child: Text("New broadcast")),
-              PopupMenuItem(child: Text("Linked devices")),
-              PopupMenuItem(child: Text("Starred messages")),
-              PopupMenuItem(child: Text("Payments")),
-              PopupMenuItem(child: Text("Settings")),
-            ];
-          })
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text("Whatsapp"),
+      //   actions: [
+      //     Icon(Icons.camera_alt_outlined),
+      //     SizedBox(width: 30),
+      //     Icon(Icons.search),
+      //     SizedBox(width: 20),
+      //     PopupMenuButton(itemBuilder: (context) {
+      //       return [
+      //         PopupMenuItem(child: Text("New group")),
+      //         PopupMenuItem(child: Text("New broadcast")),
+      //         PopupMenuItem(child: Text("Linked devices")),
+      //         PopupMenuItem(child: Text("Starred messages")),
+      //         PopupMenuItem(child: Text("Payments")),
+      //         PopupMenuItem(child: Text("Settings")),
+      //       ];
+      //     })
+      //   ],
+      // ),
       body: ListView.builder(
           itemCount: 11,
           itemBuilder: (context, index) {
@@ -74,6 +81,7 @@ class Whatsapp_Chat extends StatelessWidget {
                 title: Text(names[index]),
                 subtitle: Wrap(
                   children: [
+                      Icon(status[index]),
                     Text(message[index]),
                   ],
                 ),
@@ -93,6 +101,7 @@ class Whatsapp_Chat extends StatelessWidget {
 
             );
           }),
+      floatingActionButton: FloatingActionButton(onPressed: (){},backgroundColor: Colors.green,child: Icon(Icons.message),),
     );
   }
 }

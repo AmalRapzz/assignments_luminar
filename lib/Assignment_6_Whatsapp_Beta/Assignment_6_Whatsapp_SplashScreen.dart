@@ -1,33 +1,29 @@
-
-import 'Assignment_4_Whatsapp_Chat.dart';
-
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'Assignment_6_BottomBar.dart';
 
 void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false,
-  theme: ThemeData(primarySwatch: Colors.green),
-  home: SplashScreen_3(),
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.green),
+    home: SplashScreen_Beta(),
   ));
 }
 
-class SplashScreen_3 extends StatefulWidget {
-
+class SplashScreen_Beta extends StatefulWidget {
   @override
-  State<SplashScreen_3> createState() => _SplashScreen_3State();
+  State<SplashScreen_Beta> createState() => _SplashScreen_BetaState();
 }
 
-class _SplashScreen_3State extends State<SplashScreen_3> {
-
+class _SplashScreen_BetaState extends State<SplashScreen_Beta> {
   @override
   void initState(){
     Timer(Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Whatsapp_Chat()));
-  });
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Whatsapp_BottomBar()));
+    });
     super.initState();
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +35,7 @@ class _SplashScreen_3State extends State<SplashScreen_3> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/icons/whatsapp_icon.png"),
+              Image.asset("assets/icons/whatsapp_icon.png",height: 100,width: 100,),
               Text("Whatsapp",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.green),textAlign: TextAlign.end,)
             ],
           ),

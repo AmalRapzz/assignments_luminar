@@ -82,25 +82,25 @@ void main() {
   Widget build(BuildContext context) {
   return Scaffold(
 
-  appBar: AppBar(
-  title: Text("Whatsapp"),
-  actions: [
-  Icon(Icons.camera_alt_outlined),
-  SizedBox(width: 30),
-  Icon(Icons.search),
-  SizedBox(width: 20),
-  PopupMenuButton(itemBuilder: (context){
-  return [
-  PopupMenuItem(child: Text("New group")),
-  PopupMenuItem(child: Text("New broadcast")),
-  PopupMenuItem(child: Text("Linked devices")),
-  PopupMenuItem(child: Text("Starred messages")),
-  PopupMenuItem(child: Text("Payments")),
-  PopupMenuItem(child: Text("Settings")),
-  ];
-  })
-  ],
-  ),
+  // appBar: AppBar(
+  // title: Text("Whatsapp"),
+  // actions: [
+  // Icon(Icons.camera_alt_outlined),
+  // SizedBox(width: 30),
+  // Icon(Icons.search),
+  // SizedBox(width: 20),
+  // PopupMenuButton(itemBuilder: (context){
+  // return [
+  // PopupMenuItem(child: Text("New group")),
+  // PopupMenuItem(child: Text("New broadcast")),
+  // PopupMenuItem(child: Text("Linked devices")),
+  // PopupMenuItem(child: Text("Starred messages")),
+  // PopupMenuItem(child: Text("Payments")),
+  // PopupMenuItem(child: Text("Settings")),
+  // ];
+  // })
+  // ],
+  // ),
   body:ListView.builder(
   itemCount: 10,
   itemBuilder: (context,index) {
